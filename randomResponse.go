@@ -4,11 +4,16 @@ import(
 	"fmt"
 	"math/rand"
 	"time"
+	"regexp"
 )
 
 func ElizaResponse(input string)string{
-	answers := []string{
+	
 
+		if matched, _ := regexp.MatchString(`()?i.*\b.*`, input); matched{
+			return "Why dont you tell me more about your father?"
+		}
+		answers := []string{
 		"Im not sure what you're trying to say, Could you explain it to me?",
 		"How does that make you feel?",
 		"Why do you say that?",

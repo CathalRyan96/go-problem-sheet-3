@@ -10,9 +10,11 @@ import(
 func ElizaResponse(input string)string{
 	
 
-		if matched, _ := regexp.MatchString(`()?i.*\b.*`, input); matched{
+		if matched, _ := regexp.MatchString(`()?i.*\bfather\b.*`, input); matched{
 			return "Why dont you tell me more about your father?"
 		}
+
+
 		answers := []string{
 		"Im not sure what you're trying to say, Could you explain it to me?",
 		"How does that make you feel?",
@@ -43,6 +45,7 @@ func main(){
 	fmt.Println("My grandfather was French!")
 	fmt.Println(ElizaResponse("My grandfather was french"))
 	fmt.Println()
+
 
 }
 
